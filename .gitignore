@@ -1,0 +1,16 @@
+# Godot 4+ specific ignores
+# ----------------------------
+
+# Directorio de caché y metadatos del editor de Godot 4+
+.godot/
+
+# Archivos de importación de recursos (binarios convertidos)
+# Nota: En Godot 4+, los archivos .import se almacenan en .godot/ por defecto,
+# pero es común que algunos estén en la raíz. Mejor ignorarlos explícitamente.
+*.import/
+
+# Archivos de traducción compilados
+*.translation
+
+# Directorios de dependencias de C# (Mono)
+.mono/

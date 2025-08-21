@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1s2g83sl7t0f"]
+
+[ext_resource type="Script" path="res://Scripts/Player/Player.cs" id="1_aui5l"]
+[ext_resource type="Texture2D" uid="uid://cfbfk6q07a6py" path="res://Sprites/Tiles/tile_0045.png" id="2_dywlr"]
+[ext_resource type="Texture2D" uid="uid://85ert3p8fv5w" path="res://Sprites/Tiles/tile_0040.png" id="3_u3xjx"]
+[ext_resource type="Texture2D" uid="uid://4h07lmnc1t0d" path="res://Sprites/Tiles/tile_0046.png" id="4_36reg"]
+[ext_resource type="Texture2D" uid="uid://bramndm284awn" path="res://Sprites/Tiles/tile_0041.png" id="5_o6qjq"]
+[ext_resource type="Texture2D" uid="uid://7lb2nhhm20hp" path="res://Sprites/Tiles/tile_0042.png" id="6_h2fjw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gpqct"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dywlr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u3xjx")
+}],
+"loop": true,
+"name": &"default_weapon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dywlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_36reg")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u3xjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o6qjq")
+}],
+"loop": true,
+"name": &"run_weapon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u3xjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h2fjw")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72u32"]
+size = Vector2(5, 9)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_aui5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_gpqct")
+frame_progress = 0.536296
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3.5)
+shape = SubResource("RectangleShape2D_72u32")
