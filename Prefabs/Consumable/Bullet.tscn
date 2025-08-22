@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2cq6axqiegeu"]
+
+[ext_resource type="Texture2D" uid="uid://cghfui28cb8f4" path="res://Sprites/Tiles/tile_0044.png" id="1_5byle"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ss8ut"]
+
+[node name="Bullet" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ss8ut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5byle")

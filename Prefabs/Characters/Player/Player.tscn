@@ -74,3 +74,10 @@ animation = &"run"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_72u32")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 3.5)
+shape = SubResource("RectangleShape2D_72u32")
+debug_color = Color(0.972028, 0, 0.443895, 0.42)

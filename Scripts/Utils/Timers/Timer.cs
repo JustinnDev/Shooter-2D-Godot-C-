@@ -4,7 +4,7 @@ using System;
 namespace Game
 {
     [Serializable]
-    public class Timer
+    public struct Timer
     {
         public TimeScale timeScale;
         public UpdateMode updateMode;

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://s4g3m5r3lrnw"]
+[gd_scene load_steps=8 format=3 uid="uid://s4g3m5r3lrnw"]
 
 [ext_resource type="Texture2D" uid="uid://b5bg6jdbawocu" path="res://Sprites/Tilemap/tilemap.png" id="1_eoxp8"]
 [ext_resource type="PackedScene" uid="uid://d1s2g83sl7t0f" path="res://Prefabs/Characters/Player/Player.tscn" id="2_j5kon"]
 [ext_resource type="PackedScene" uid="uid://5rh2thgyalgo" path="res://Prefabs/UI/camera_2d.tscn" id="3_re2bm"]
+[ext_resource type="PackedScene" uid="uid://v0f3ga0s1bv1" path="res://Prefabs/Consumable/Weapon.tscn" id="4_33krf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m1dj0"]
 texture = ExtResource("1_eoxp8")
@@ -92,3 +93,6 @@ shape = SubResource("RectangleShape2D_mhl2o")
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_re2bm")]
 zoom = Vector2(2, 2)
 target = NodePath("../Player")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_33krf")]
+position = Vector2(52, 4)
