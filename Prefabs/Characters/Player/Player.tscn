@@ -27,10 +27,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_dywlr")
+"texture": ExtResource("4_36reg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_36reg")
+"texture": ExtResource("2_dywlr")
 }],
 "loop": true,
 "name": &"run",
@@ -38,10 +38,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_u3xjx")
+"texture": ExtResource("5_o6qjq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_o6qjq")
+"texture": ExtResource("3_u3xjx")
 }],
 "loop": true,
 "name": &"run_weapon",
@@ -49,10 +49,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_u3xjx")
+"texture": ExtResource("6_h2fjw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_h2fjw")
+"texture": ExtResource("3_u3xjx")
 }],
 "loop": true,
 "name": &"shoot",
@@ -69,7 +69,7 @@ script = ExtResource("1_aui5l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_gpqct")
-frame_progress = 0.536296
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 3.5)

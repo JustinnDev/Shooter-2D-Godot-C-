@@ -5,55 +5,69 @@ namespace Game
 {
     public struct InputMap
     {
-        public static readonly string Right = "Right";
-        public static readonly string Left = "Left";
-        public static readonly string Up = "Up";
-        public static readonly string Down = "Down";
-        public static readonly string Shoot = "Shoot";
-    }
+        public static readonly Input Move = new("Left" , "Right");
+        public static readonly Input Up = new("Up");
+        public static readonly Input Down = new("Down");
+        public static readonly Input Shoot = new("Shoot");
 
-
-//Estructuras 
-[Serializable]
-    public class Buttons
-    {
-        public Input dashAxis; //Comprueba si se apreta el boton de dash
-        public Input upAxis; //Comprueba si se apreta la flecha de arriba
-        public Input downAxis; //Comprueba si se apreta la flecha de abajo
-        public Input southAxis; //Comprueba si se apreta el boton sur del mando
-        public Input eastAxis; //Comprueba si se apreta el boton este del mando
-        public Input powerAxis; //Comprueba si se apreta el boton de super poder
-        public Input missileAxis; //Comrpueba si se apreta el boton de disparar misil
-        public Input axis; //Obtiene la referencia de la direccion de _axis
-
+        public static void Process()
+        {
+            Move.Process();
+            Up.Process();
+            Down.Process();
+            Shoot.Process();
+        }
 
         [Serializable]
         public class Input
         {
-            [Export] private bool wasUnpressed = true;
-            [Export] private float value;
+            [Export] private bool _wasUnpressed = true;
+            [Export] private float _value;
+            [Export] private string[] _name;
+            [Export] private Type type;
 
-            public bool GetDown()
+            public Input(params string[] _name)
             {
-                if (wasUnpressed && Get())
+                this._name = _name;
+            }
+            
+            public void Process()
+            {
+                if (_name.Length > 1)
                 {
-                    wasUnpressed = false;
+                    _value = Godot.Input.GetAxis(_name[0], _name[1]);
+                    return;
+                }
+
+                _value = Godot.Input.GetActionStrength(_name[0]);
+            }
+
+            public float GetAxis() => _value;
+
+            public bool GetActionDown()
+            {
+                if (_wasUnpressed && GetAction())
+                {
+                    _wasUnpressed = false;
                     return true;
                 }
 
-                else if (!wasUnpressed && !Get())
+                else if (!_wasUnpressed && !GetAction())
                 {
-                    wasUnpressed = true;
+                    _wasUnpressed = true;
                     return false;
                 }
 
                 return false;
             }
 
-            public bool Get() => Mathf.Abs(value) > 0;
+            public bool GetAction() => Mathf.Abs(_value) > 0;
 
-            public static implicit operator float(Input a) => a.value;
-            public static implicit operator Input(float a) => new Input() { value = a };
+            public static implicit operator float(Input a) => a._value;
+            public static implicit operator Input(float a) => new Input() { _value = a };
         }
+
     }
+
+
 }

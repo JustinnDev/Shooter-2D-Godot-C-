@@ -1,109 +1,115 @@
 ﻿using Godot;
 using System;
 
-[Serializable]
-public partial class Timer : Node
+namespace Game
 {
-    public TimeScale timeScale;
-    public UpdateMode updateMode;
-    public TypeOperation typeOperation;
-
-    public float count { get; private set; }
-    public float countLimit { get; private set; }
-    public float defaultLimit { get; private set; }
-
-    [Export] private float _countLimit; //Para colocar desde el editor
-    [Export] private float _count; //Variable para visualizar desde el editor
-    [Export] private float _defaultLimit;
-
-    private bool readyToUpdate;//Para que la accion de stopp solo se ejecute una vez 
-
-    public void Update(bool whenToOperation, Action actionOfOperation, bool whenToStop, Action actionOfStop, bool actionReset = true)
+    [Serializable]
+    public class Timer
     {
-        SetValueOnEditor();
+        public TimeScale timeScale;
+        public UpdateMode updateMode;
+        public TypeOperation typeOperation;
 
-        if (whenToOperation)
+        public float count { get; private set; }
+        public float countLimit { get; private set; }
+        public float defaultLimit { get; private set; }
+
+        //Hay que quitar las variables para visualizar desde el inspector ya que no las voy a usar
+
+        [Export] private float _countLimit; //Para colocar desde el editor
+        [Export] private float _count; //Variable para visualizar desde el editor
+        [Export] private float _defaultLimit;
+
+        private bool readyToUpdate;//Para que la accion de stopp solo se ejecute una vez 
+
+        public void Update(bool whenToOperation, Action actionOfOperation, bool whenToStop, Action actionOfStop, double delta, bool actionReset = true)
         {
-            if (actionOfOperation != null)
-                actionOfOperation();
+            SetValueOnEditor();
 
-            Add();
+            if (whenToOperation)
+            {
+                if (actionOfOperation != null)
+                    actionOfOperation();
+
+                Add(delta);
+            }
+
+            if (whenToStop && readyToUpdate)
+            {
+                if (actionOfStop != null)
+                    actionOfStop();
+
+                if (actionReset)
+                    Reset();
+            }
         }
 
-        if (whenToStop && readyToUpdate)
+        //Constructores
+        #region
+        public void SetDefaultLimit(float limit = 0) => defaultLimit = limit == 0 ? _countLimit : limit;
+        #endregion
+
+        //Metodos Contador
+        #region
+        private void Add(double delta)
         {
-            if (actionOfStop != null)
-                actionOfStop();
+            switch (timeScale)
+            {
+                case TimeScale.Scaled:
+                    count = typeOperation == TypeOperation.Increment ?
+                           count + (float)delta :
+                           count - (float)delta;
+                    break;
+                case TimeScale.Unscaled:
+                    count = typeOperation == TypeOperation.Increment ?
+                           count + (float)delta :
+                           count - (float)delta;
+                    break;
+            }
 
-            if (actionReset)
-                Reset();
+            readyToUpdate = true;
         }
-    }
-
-    //Constructores
-    #region
-    public void SetDefaultLimit(float limit = 0) => defaultLimit = limit == 0 ? _countLimit : limit;
-    #endregion
-
-    //Metodos Contador
-    #region
-    private void Add()
-    {
-        switch (timeScale)
+        public void Reset()
         {
-            case TimeScale.Scaled:
-                count = typeOperation == TypeOperation.Increment ?
-                       count + (float)GetProcessDeltaTime() :
-                       count - (float)GetProcessDeltaTime();
-                break;
-            case TimeScale.Unscaled:
-                count = typeOperation == TypeOperation.Increment ?
-                       count + (float)GetPhysicsProcessDeltaTime() :
-                       count - (float)GetPhysicsProcessDeltaTime();
-                break;
+            count = 0;
+            readyToUpdate = updateMode == UpdateMode.OnlyOnce ? false : true;
+        }
+        #endregion
+
+        //Metodos Contador
+        #region
+        public void SetLimit(float limit) => _countLimit = Mathf.Abs(limit);
+        public float GetLimit() => Mathf.Abs(_countLimit);
+        public bool OverLimit() => Mathf.Abs(count) > Mathf.Abs(countLimit);
+        public bool OnLimit() => Mathf.Abs(count) >= Mathf.Abs(countLimit);
+        #endregion
+
+        //Editor
+        #region
+        public void SetValueOnEditor()
+        {
+            _count = count;
+            countLimit = _countLimit;
+            _defaultLimit = defaultLimit;
+        }
+        #endregion
+
+        public enum TimeScale
+        {
+            Scaled,
+            Unscaled
         }
 
-        readyToUpdate = true;
-    }
-    public void Reset()
-    {
-        count = 0;
-        readyToUpdate = updateMode == UpdateMode.OnlyOnce ? false : true;
-    }
-    #endregion
+        public enum UpdateMode
+        {
+            Continuous,
+            OnlyOnce
+        }
 
-    //Metodos Contador
-    #region
-    public void SetLimit(float limit) => _countLimit = Mathf.Abs(limit);
-    public float GetLimit() => Mathf.Abs(_countLimit);
-    public bool OverLimit() => Mathf.Abs(count) > Mathf.Abs(countLimit);
-    #endregion
-
-    //Editor
-    #region
-    public void SetValueOnEditor()
-    {
-        _count = count;
-        countLimit = _countLimit;
-        _defaultLimit = defaultLimit;
-    }
-    #endregion
-
-    public enum TimeScale
-    {
-        Scaled,
-        Unscaled
-    }
-
-    public enum UpdateMode
-    {
-        Continuous,
-        OnlyOnce
-    }
-
-    public enum TypeOperation
-    {
-        Increment,
-        Decrement
+        public enum TypeOperation
+        {
+            Increment,
+            Decrement
+        }
     }
 }
