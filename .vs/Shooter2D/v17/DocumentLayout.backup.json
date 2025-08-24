@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\ui\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\ui\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\projectsettings\\contracts\\iconsumable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\projectsettings\\contracts\\iconsumable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\consumable\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\consumable\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\utils\\timers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\utils\\timers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\projectsettings\\animationsmaps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\projectsettings\\animationsmaps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\consumable\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\consumable\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\utils\\timers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\utils\\timers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\projectsettings\\contracts\\iconsumable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\projectsettings\\contracts\\iconsumable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\projectsettings\\inputmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\utils\\timers\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\utils\\timers\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|c:\\users\\mondongo\\documents\\repositorios\\shooter2d\\scripts\\ui\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{217D37A6-7F71-4DE4-8C24-41BE28A86154}|Shooter2D.csproj|solutionrelative:scripts\\ui\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,9 +45,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 158,
+          "DockedWidth": 384,
           "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\UI\\CameraController.cs",
+              "RelativeDocumentMoniker": "Scripts\\UI\\CameraController.cs",
+              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\UI\\CameraController.cs",
+              "RelativeToolTip": "Scripts\\UI\\CameraController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T20:44:07.494Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -48,14 +69,14 @@
               "RelativeDocumentMoniker": "Scripts\\Utils\\Timers\\Timer.cs",
               "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Utils\\Timers\\Timer.cs",
               "RelativeToolTip": "Scripts\\Utils\\Timers\\Timer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCQAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T22:58:01.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "InputMap.cs",
               "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\InputMap.cs",
               "RelativeDocumentMoniker": "Scripts\\ProjectSettings\\InputMap.cs",
@@ -67,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Time.cs",
               "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Utils\\Timers\\Time.cs",
               "RelativeDocumentMoniker": "Scripts\\Utils\\Timers\\Time.cs",
@@ -76,41 +97,55 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T00:26:06.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CameraController.cs",
-              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\UI\\CameraController.cs",
-              "RelativeDocumentMoniker": "Scripts\\UI\\CameraController.cs",
-              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\UI\\CameraController.cs",
-              "RelativeToolTip": "Scripts\\UI\\CameraController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T20:44:07.494Z"
             }
           ]
         },
         {
-          "DockedWidth": 242,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 16,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IConsumable.cs",
-              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
-              "RelativeDocumentMoniker": "Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
-              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
-              "RelativeToolTip": "Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Scripts\\Player\\Player.cs",
+              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Player\\Player.cs",
+              "RelativeToolTip": "Scripts\\Player\\Player.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwFoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T11:33:18.065Z",
+              "WhenOpened": "2025-08-20T21:52:42.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Consumable\\Bullet.cs",
+              "RelativeDocumentMoniker": "Scripts\\Consumable\\Bullet.cs",
+              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Consumable\\Bullet.cs",
+              "RelativeToolTip": "Scripts\\Consumable\\Bullet.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T13:13:45.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AnimationsMaps.cs",
+              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\AnimationsMaps.cs",
+              "RelativeDocumentMoniker": "Scripts\\ProjectSettings\\AnimationsMaps.cs",
+              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\AnimationsMaps.cs",
+              "RelativeToolTip": "Scripts\\ProjectSettings\\AnimationsMaps.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T01:59:56.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Consumable\\Weapon.cs",
               "RelativeDocumentMoniker": "Scripts\\Consumable\\Weapon.cs",
@@ -123,15 +158,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Scripts\\Player\\Player.cs",
-              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\Player\\Player.cs",
-              "RelativeToolTip": "Scripts\\Player\\Player.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAowI4AAAA5AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IConsumable.cs",
+              "DocumentMoniker": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
+              "RelativeDocumentMoniker": "Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
+              "ToolTip": "C:\\Users\\Mondongo\\Documents\\Repositorios\\shooter2d\\Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
+              "RelativeToolTip": "Scripts\\ProjectSettings\\Contracts\\IConsumable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T21:52:42.083Z",
+              "WhenOpened": "2025-08-22T11:33:18.065Z",
               "EditorCaption": ""
             }
           ]

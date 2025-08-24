@@ -4,6 +4,9 @@ namespace Game
 {
     public partial class Player : CharacterBody2D
     {
+        [ExportGroup("Prefabs")]
+        private PackedScene _bullet;
+
         [ExportGroup("Area2D/Collision2D")]
         private Area2D _area;
 
@@ -17,6 +20,7 @@ namespace Game
         [ExportGroup("Animations")]
         private AnimatedSprite2D _animator;
         private SpriteFrames _spriteFrames;
+        private Vector2I _faceDirection;
 
         [ExportGroup("States")]
         public State state;
@@ -35,16 +39,13 @@ namespace Game
         {
             _animator = GetNode<AnimatedSprite2D>("Sprite2D/AnimatedSprite2D");
             _area = GetNode<Area2D>("Area2D");
+            _bullet = GD.Load<PackedScene>("res://Prefabs/Consumable/Bullet.tscn");
             _spriteFrames = _animator.SpriteFrames;
 
             _TimerConfiguration();
 
             _area.AreaEntered += _OnArea2DBodyEntered;
             _area.AreaExited += _OnArea2DBodyExit;
-        }
-
-        public override void _Process(double delta)
-        {
         }
 
         public override void _PhysicsProcess(double delta)
@@ -54,6 +55,7 @@ namespace Game
             _ActionController();
             _TimersController(delta);
             _PhysicsController(delta);
+            _ShootController();
             _AnimationsController();
         }
 
@@ -64,6 +66,7 @@ namespace Game
             if(Mathf.Abs(_velocity.X) > 0)
             {
                 _animator.FlipH = Mathf.Sign(_velocity.X) == -1;
+                _faceDirection = _animator.FlipH ? Vector2I.Left : Vector2I.Right;
             }
 
             if (_isShooting)
@@ -86,7 +89,12 @@ namespace Game
         #region
         private void _ShootController()
         {
+            if (!_isShooting)
+                return;
 
+            Node2D currentBullet = _bullet.Instantiate<Node2D>();
+            currentBullet.GetNode<Bullet>(".").SetDirection(_faceDirection);
+            AddChild(currentBullet);
         }
 
         private void _PhysicsController(double delta)
@@ -161,7 +169,6 @@ namespace Game
         }
         #endregion
 
-
         // Timers Controller 
         #region
         private void _TimersController(double delta)
@@ -194,12 +201,13 @@ namespace Game
         }
         #endregion
 
-        
-
+        // Structs and Enums
+        #region
         public enum State
         {
             Default,
             Weaponed
         }
+        #endregion
     }
 }

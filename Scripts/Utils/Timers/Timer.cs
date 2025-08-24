@@ -78,7 +78,7 @@ namespace Game
 
         //Metodos Contador
         #region
-        public void SetLimit(float limit) => _countLimit = Mathf.Abs(limit);
+        public void SetLimit(float limit) => countLimit = _countLimit = Mathf.Abs(limit);
         public float GetLimit() => Mathf.Abs(_countLimit);
         public bool OverLimit() => Mathf.Abs(count) > Mathf.Abs(countLimit);
         public bool OnLimit() => Mathf.Abs(count) >= Mathf.Abs(countLimit);
